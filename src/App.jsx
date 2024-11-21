@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Home from './pages/Home';
-import Reservas from './pages/Reservas'; // Nueva página de Reservas
+import Reservar from './pages/Reservar'; // Página de reserva
 import Button from '@mui/material/Button'; // Botón de Material-UI
 
 const App = () => {
@@ -14,8 +13,8 @@ const App = () => {
 
       {/* Configuración de Rutas */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservas" element={<Reservas />} />
+        <Route path="/" element={<Reservar />} /> {/* Ruta principal redirige a Reservar */}
+        <Route path="/reservar" element={<Reservar />} /> {/* Ruta de reservas */}
       </Routes>
 
       {/* Botón de Material-UI */}
